@@ -3,27 +3,24 @@ name: dependancy-checker
 on: [push]
 
 jobs:
-  integration-test:
-  runs-on: ubuntu-20.04
-  container:
-    image: python:3.9-alpine
-    options: --cpus 1
-  steps:
-    - name: Check out the repository code
-      uses: actions/checkout@v2
-    - name: Integration test
-      run: python factorial.py
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check out the repository code
+        uses: actions/checkout@v2
+      - name: Integration test
+        run: python factorial.py
 
-    name: Set up Node 14
-    uses: actions/setup-node@v3
-    with:
-      node-version: 14
-    - name: install SNYK CLI
-      run: npm install -g snyk
-    - name: run Snyk Open Source Test
-      run: snyk test
-    - name: run Snyk Code Test
-      run: snyk code test      
+      name: Set up Node 14
+      uses: actions/setup-node@v3
+      with:
+        node-version: 14
+      - name: install SNYK CLI
+        run: npm install -g snyk
+      - name: run Snyk Open Source Test
+        run: snyk test
+      - name: run Snyk Code Test
+        run: snyk code test      
 
   lint:
     runs-on: ubuntu-20.04
