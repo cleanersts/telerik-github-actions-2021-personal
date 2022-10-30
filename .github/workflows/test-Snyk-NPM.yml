@@ -34,6 +34,18 @@ jobs:
     - name: Lint with pylint
       run: |
         python lint_test.py
+  sonarcloud:
+    name: SonarCloud
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.SECRET_GITHUB }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   dependencies-check:
     runs-on: ubuntu-latest
