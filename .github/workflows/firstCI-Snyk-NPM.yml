@@ -20,15 +20,15 @@ jobs:
   lint:
     runs-on: ubuntu-20.04
     steps:
-      name: "Yamllint GitHub Actions"
+     # name: "Yamllint GitHub Actions"
        jobs:
        yamllint:
-        name: "Yamllint"
+      #  name: "Yamllint"
         runs-on: ubuntu 20.04
         steps:
-          - name: "Checkout"
+          #- name: "Checkout"
             uses: actions/checkout@master
-          - name: "Yamllint"
+          #- name: "Yamllint"
             uses: karancode/yamllint-github-action@master
             with:
               yamlllint_file_or_dir: "<yaml_file_or_dir>"
