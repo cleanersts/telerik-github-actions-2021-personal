@@ -49,4 +49,4 @@ jobs:
     - name: run Snyk Code Test
       run: snyk code test          
       env:
-        SNYK_TOKEN: 5b8fd765-2e0a-4ef5-a810-92e737a41377
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
