@@ -19,14 +19,14 @@ jobs:
 
   lint:
     runs-on: ubuntu-20.04
-      steps:
-        #- name: "Checkout"
-          uses: actions/checkout@master
-        #- name: "Yamllint"
-          uses: karancode/yamllint-github-action@master
-          with:
-            yamlllint_file_or_dir: "<yaml_file_or_dir>"
-            yamllint_strict: false
-            yamllint_comment: true
-          env:
-            GITHUB_ACCESS_TOKEN: ${{secrets.GITHUB_TOKEN}}   
+    steps:
+      #- name: "Checkout"
+        uses: actions/checkout@master
+      #- name: "Yamllint"
+        uses: karancode/yamllint-github-action@master
+        with:
+          yamlllint_file_or_dir: "<yaml_file_or_dir>"
+          yamllint_strict: false
+          yamllint_comment: true
+        env:
+          GITHUB_ACCESS_TOKEN: ${{secrets.GITHUB_TOKEN}}   
