@@ -1,7 +1,7 @@
 name: dependancy-checker
 
 on: [push]
-#snyk test
+#snyk tests
 jobs:
   integration-test:
     runs-on: ubuntu-latest
@@ -42,7 +42,7 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 14
-        
+
       env:
       SNYK_TOKEN: 5b8fd765-2e0a-4ef5-a810-92e737a41377
     - name: install SNYK CLI
