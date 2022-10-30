@@ -44,7 +44,8 @@ jobs:
         node-version: 14 
     - name: install SNYK CLI
       run: npm install -g snyk
-    - name: token test  
+      
+    - name: token test
       env:
         SNYK_TOKEN: 5b8fd765-2e0a-4ef5-a810-92e737a41377
     - name: run Snyk Open Source Test
