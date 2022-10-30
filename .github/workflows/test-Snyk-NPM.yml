@@ -1,7 +1,10 @@
 name: dependancy-checker
 
 on: [push]
-#sss
+- name: SonarCloud Scan
+  uses: SonarSource/sonarcloud-github-action@v1.7
+
+#ssss
 jobs:
   integration-test:
     runs-on: ubuntu-latest
@@ -34,6 +37,7 @@ jobs:
     - name: Lint with pylint
       run: |
         python lint_test.py
+
   sonarcloud:
     name: SonarCloud
     runs-on: ubuntu-latest
