@@ -1,8 +1,8 @@
 name: Github-action-practice
 
-on:
-  push:
-    branches: [ our-first-pipeline ]
+on: [push]
+  #push:
+    #branches: [ our-first-pipeline ]
     
 jobs:
   integration-test:
