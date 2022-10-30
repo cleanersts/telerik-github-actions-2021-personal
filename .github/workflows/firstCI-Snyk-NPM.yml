@@ -3,7 +3,7 @@ name: dependancy-checker
 on: [push]
 
 jobs:
-  build:
+  dependencies-check:
     runs-on: ubuntu-20.04
     steps:
       - name: Check out the repository code
