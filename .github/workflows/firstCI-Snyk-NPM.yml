@@ -3,19 +3,19 @@ name: dependancy-checker
 on: [push]
 
 jobs:
-  #dependencies-check:
-  #  runs-on: ubuntu-20.04
-  #  steps:
-  #    - name: Set up Node 14
-  #      uses: actions/setup-node@v3
-  #      with:
-  #        node-version: 14
-  #      - name: install SNYK CLI
-  #        run: npm install -g snyk
-  #      - name: run Snyk Open Source Test
-  #        run: snyk test
-  #      - name: run Snyk Code Test
-  #        run: snyk code test      
+  dependencies-check:
+    runs-on: ubuntu-20.04
+    steps:
+      #- name: Set up Node 14
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+       # - name: install SNYK CLI
+          run: npm install -g snyk
+        #- name: run Snyk Open Source Test
+          run: snyk test
+       # - name: run Snyk Code Test
+          run: snyk code test      
 
   lint:
     runs-on: ubuntu-20.04
