@@ -1,5 +1,7 @@
 name: learn-github-actions
-on: [never]
+on:
+  push:
+    branches: [ our-first-pipeline ]
 jobs:
   build:
     runs-on: ubuntu-latest
