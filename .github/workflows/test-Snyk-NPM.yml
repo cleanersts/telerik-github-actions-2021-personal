@@ -1,8 +1,8 @@
 name: dependancy-checker
 
 on: [push]
-- name: SonarCloud Scan
-  uses: SonarSource/sonarcloud-github-action@v1.7
+#- name: SonarCloud Scan
+#  uses: SonarSource/sonarcloud-github-action@v1.7
 
 #ssss
 jobs:
