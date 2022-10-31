@@ -55,6 +55,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Snyk to check for vulnarabilities
-      uses: snyk/actions/node@master       
-      env:
-        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        uses: snyk/actions/node@master       
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
